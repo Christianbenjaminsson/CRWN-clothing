@@ -61,14 +61,14 @@ class App extends React.Component {
 }
 
 const mapStateToProps = ({ user }) => ({
-  setCurrentUser: user.currentUser
-})
+  currentUser: user.currentUser
+});
 
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
 export default connect(
-  mapStateToProps, 
+  mapStateToProps,
   mapDispatchToProps
-  )(App);
+)(App);
