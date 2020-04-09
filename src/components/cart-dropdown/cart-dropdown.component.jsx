@@ -6,7 +6,6 @@ import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { createStructuredSelector } from 'reselect';
 
 import './cart-dropdown.styles.scss';
-import { createStructuredSelector } from 'reselect';
 
 const CartDropdown = ({ cartItems }) => (
   <div className='cart-dropdown'>
