@@ -10,13 +10,13 @@ const COLLECTION_ID_MAP = {
 
 const selectShop = state => state.shop;
 
-export const SelectCollections = createSelector(
+export const selectCollections = createSelector(
   [selectShop],
   shop => shop.collections
 );
 
 export const selectCollection = collectionUrlParam =>
 createSelector(
-  [selectCollection],
+  [selectCollections],
   collections => collections.find(collection => collection.id == COLLECTION_ID_MAP[collectionUrlParam])
 );
