@@ -6,6 +6,7 @@ import './checkout.styles.scss';
 import { applyMiddleware } from 'redux';
 import CartItem from '../../components/cart-item/cart-item.component';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
+import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
 
 const CheckoutPage = ({cartItems, total}) => (
   <div className='checkout-page'>
@@ -31,6 +32,7 @@ const CheckoutPage = ({cartItems, total}) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
     <div className='total'>TOTAL: ${total}</div>
+    <StripeCheckoutButton price={total} />
   </div>
 );
 
