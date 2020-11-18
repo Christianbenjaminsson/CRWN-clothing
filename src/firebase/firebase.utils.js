@@ -69,7 +69,7 @@ export const convertCollectionsSnapshotToMap = collections => {
   }, {});
 };
 
-export const getCurrentUser = () =>{
+export const getCurrentUser = () => {
   return new Promise((resolve, reject) => {
     const unsubscribe = auth.onAuthStateChanged(userAuth => {
       unsubscribe();
