@@ -57,13 +57,13 @@ export function* onEmailSignInStart() {
 }
 
 export function* onCheckUserSession() {
-  yield takeLatest(UserActionTypes.CHECK_USER_SESSION,isUserAuthenticated)
+  yield takeLatest(UserActionTypes.CHECK_USER_SESSION, isUserAuthenticated)
 }
 
 export function* userSagas() {
   yield all([
     call(onGoogleSignInStart), 
     call(onEmailSignInStart), 
-    call(isUserAuthenticated)
+    call(onCheckUserSession)
   ]);
 }
