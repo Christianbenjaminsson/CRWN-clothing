@@ -1,21 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FormInput from '../form-input/form.input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import './sign-up.styles.scss';
 import { signUpStart } from '../../redux/user/user.actions'; 
 import { connect } from 'react-redux';
 
-class SignUp extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
+const SignUp = () =>  {
+  const [userCredentials, setUserCredentials] = useState ({
       displayName: '',
       email: '',
       password: '',
       confirmPassword: ''
-    };
-  }
+  });
 
   handleSubmit = async event => {
     event.preventDefault();
