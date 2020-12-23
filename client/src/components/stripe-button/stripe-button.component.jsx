@@ -1,5 +1,4 @@
 import React from 'react';
-import stripeCheckout from 'react-stripe-checkout';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 
